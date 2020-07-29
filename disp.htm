@@ -1,0 +1,80 @@
+<DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#b1").click(function(){
+ var x=$("#div1").width();
+ x+=10;
+$("#div1").width(x);
+var y=$("#div1").height();
+y=y+10;
+$("#div1").height(y);
+});
+$("#b2").click(function(){
+var a=$("#div1").width();
+a-=10;
+$("#div1").width(a);
+var b=$("#div1").height();
+b-=10;
+$("#div1").height(b);
+});
+$("#b3").click(function(){
+ $("#div1").animate({
+height:'400px',
+width:'700px'
+});
+});
+qwe =0;
+$("#l").click(function(){
+qwe-=90;
+$("#div1").css({ 'transform': 'rotate('+qwe+'deg)'})
+});
+$("#r").click(function(){
+qwe+=90;
+$("#div1").css({'transform': 'rotate('+qwe+'deg)'})
+});
+
+});
+</script>
+<style>
+#div1 {
+height:400px;
+width:700px;
+
+overflow:hidden;
+}
+#div2 {
+margin:0 auto;
+height:400px;
+width:700px;
+border:7px dashed   #ffe6e6;
+overflow:hidden;
+}
+
+</style>
+<body>
+<br>
+
+<div id="div2"><img id="div1" src="BTS.jpg"> </div>
+<br><br><br><br>
+<CENTER>
+<button id="b1" onclick="function()" value="ZOOM IN +">ZOOM IN+</button>
+<button id="b2" onclick="function()" value="ZOOM OUT -">ZOOM OUT-</button>
+<br><br>
+<button id="b3" onclick="function()" value="ACTUAL SIZE">ACTUAL SIZE</button>
+<br><br>
+<button id="l" onclick="function()" value="LEFT ROTATE">LEFT ROTATE</button>
+<button id="r" onclick="function()" value="RIGHT ROTATE">RIGHT ROTATE</button>
+<br><br>
+<button id="p" onclick="function()" value="PREV">PREVIOUS</button>
+<button id="N" onclick="function()" value=" next">NEXT</button>
+</CENTER>
+</body>
+</html>
